@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="square.png">
+  <meta name="theme-color" content="#0a0a0f">
+  <title>SPIONARMY — Merging Creativity with Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+</head>
+<body data-dil="tr">
+  <div id="yukleme" class="loading-screen">
+    <div class="loading-content">
+      <div class="logo-loading">SPIONARMY</div>
+      <div class="loading-bar"><div class="loading-progress"></div></div>
+    </div>
+  </div>
+  <div class="cursor-ring"></div>
+  <div class="cursor-dot"></div>
+
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb o1"></span>
+    <span class="orb o2"></span>
+    <span class="orb o3"></span>
+    <span class="orb o4"></span>
+  </div>
+
+  <nav class="nav glass">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <div class="logo">SPIONARMY</div>
+      </div>
+      <button class="menu-toggle" aria-label="Menü" aria-controls="primary-navigation" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links" id="primary-navigation">
+        <a href="#hero" class="nav-link">
+          <i data-lucide="home"></i>
+          <span class="label" data-translate="nav.home">Ana Sayfa</span>
+        </a>
+        <a href="#slider" class="nav-link">
+          <i data-lucide="layers"></i>
+          <span class="label" data-translate="nav.slider">Hizmetler</span>
+        </a>
+        <a href="#services" class="nav-link">
+          <i data-lucide="grid"></i>
+          <span class="label" data-translate="nav.services">Detaylar</span>
+        </a>
+        <a href="#vision" class="nav-link">
+          <i data-lucide="eye"></i>
+          <span class="label" data-translate="nav.vision">Vizyon</span>
+        </a>
+        <a href="#contact" class="nav-link">
+          <i data-lucide="mail"></i>
+          <span class="label" data-translate="nav.contact">İletişim</span>
+        </a>
+      </div>
+      <div class="nav-actions">
+        <div class="lang-switch" id="dil_kutusu">
+          <button class="lang-toggle" id="dil_anahtari" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-toggle-icon">
+              <i data-lucide="globe"></i>
+            </span>
+            <span class="lang-toggle-code" id="dil_kodu">TR</span>
+            <i class="lang-toggle-arrow" data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="lang-panel" id="dil_menusu" role="listbox">
+            <button class="lang-option" type="button" data-lang="en" data-label="English" data-code="EN" aria-selected="false">
+              <span class="lang-option-flag" aria-hidden="true">🇺🇸</span>
+              <span class="lang-option-label">English</span>
+              <span class="lang-option-code">EN</span>
+              <i data-lucide="check"></i>
+            </button>
+            <button class="lang-option is-active" type="button" data-lang="tr" data-label="Türkçe" data-code="TR" aria-selected="true">
+              <span class="lang-option-flag" aria-hidden="true">🇹🇷</span>
+              <span class="lang-option-label">Türkçe</span>
+              <span class="lang-option-code">TR</span>
+              <i data-lucide="check"></i>
+            </button>
+            <button class="lang-option" type="button" data-lang="az" data-label="Azərbaycan" data-code="AZ" aria-selected="false">
+              <span class="lang-option-flag" aria-hidden="true">🇦🇿</span>
+              <span class="lang-option-label">Azərbaycan</span>
+              <span class="lang-option-code">AZ</span>
+              <i data-lucide="check"></i>
+            </button>
+            <button class="lang-option" type="button" data-lang="fr" data-label="Français" data-code="FR" aria-selected="false">
+              <span class="lang-option-flag" aria-hidden="true">🇫🇷</span>
+              <span class="lang-option-label">Français</span>
+              <span class="lang-option-code">FR</span>
+              <i data-lucide="check"></i>
+            </button>
+            <button class="lang-option" type="button" data-lang="de" data-label="Deutsch" data-code="DE" aria-selected="false">
+              <span class="lang-option-flag" aria-hidden="true">🇩🇪</span>
+              <span class="lang-option-label">Deutsch</span>
+              <span class="lang-option-code">DE</span>
+              <i data-lucide="check"></i>
+            </button>
+            <button class="lang-option" type="button" data-lang="es" data-label="Español" data-code="ES" aria-selected="false">
+              <span class="lang-option-flag" aria-hidden="true">🇪🇸</span>
+              <span class="lang-option-label">Español</span>
+              <span class="lang-option-code">ES</span>
+              <i data-lucide="check"></i>
+            </button>
+            <button class="lang-option" type="button" data-lang="ru" data-label="Русский" data-code="RU" aria-selected="false">
+              <span class="lang-option-flag" aria-hidden="true">🇷🇺</span>
+              <span class="lang-option-label">Русский</span>
+              <span class="lang-option-code">RU</span>
+              <i data-lucide="check"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero" class="section hero">
+      <div class="hero-background">
+        <div class="hero-video-container">
+          <div class="hero-gradient-overlay"></div>
+          <div class="hero-grid-overlay"></div>
+        </div>
+        <div class="hero-particles-container"></div>
+      </div>
+      
+      <div class="hero-inner">
+        <div class="hero-badge fade">
+          <i data-lucide="zap"></i>
+          <span data-translate="hero.badge">Next Generation Media</span>
+        </div>
+        
+        <h1 class="hero-title fade">
+          <span class="hero-title-line">
+            <span class="hero-line-prefix" data-translate="hero.line.prefix"></span>
+            <span id="degisen-kelime" class="hero-dynamic-word">mobiliteyi</span>
+            <span class="hero-line-suffix" data-translate="hero.line.suffix">teknoloji ile birleştiriyoruz</span>
+          </span>
+        </h1>
+        
+        <p class="hero-subtitle fade" data-translate="hero.subtitle">
+          SPIONARMY — Building the future of visual, audio, and digital experiences.
+        </p>
+        
+        <div class="hero-stats fade">
+          <div class="hero-stat">
+            <div class="hero-stat-value" data-translate="hero.stats.0.value">500+</div>
+            <div class="hero-stat-label" data-translate="hero.stats.0.label">Projects</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value" data-translate="hero.stats.1.value">50+</div>
+            <div class="hero-stat-label" data-translate="hero.stats.1.label">Clients</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value" data-translate="hero.stats.2.value">24/7</div>
+            <div class="hero-stat-label" data-translate="hero.stats.2.label">Support</div>
+          </div>
+        </div>
+        
+        <div class="hero-cta-group fade">
+          <a href="#contact" class="btn btn-primary glow" data-translate="hero.cta.primary">
+            <span>Get Started</span>
+            <i data-lucide="arrow-right"></i>
+          </a>
+          <a href="#slider" class="btn btn-secondary" data-translate="hero.cta.secondary">
+            <i data-lucide="play-circle"></i>
+            <span>Watch Demo</span>
+          </a>
+        </div>
+        
+        <div class="hero-scroll-indicator" aria-hidden="true">
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+          <span data-translate="hero.scroll">Scroll to explore</span>
+        </div>
+      </div>
+      
+      <div class="hero-shapes">
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        <div class="hero-shape hero-shape-3"></div>
+      </div>
+    </section>
+
+    <section id="slider" class="section slider-section">
+      <div class="container">
+        <div class="slider-intro fade">
+          <span class="slider-eyebrow" data-translate="slider.eyebrow">Özel Deneyim</span>
+          <h2 class="title" data-translate="slider.title">SPION ile</h2>
+          <p class="slider-subtitle" data-translate="slider.subtitle">SPION ile marka hikâyeni sinematik bir serüvene dönüştür, her temas noktasında aynı etkiyi bırak.</p>
+          <div class="slider-meta">
+            <div class="slider-metric">
+              <span class="metric-value" data-translate="slider.metric.0.value">360°</span>
+              <span class="metric-label" data-translate="slider.metric.0.label">Tüm kanallarda strateji</span>
+            </div>
+            <div class="slider-metric">
+              <span class="metric-value" data-translate="slider.metric.1.value">7/24</span>
+              <span class="metric-label" data-translate="slider.metric.1.label">Operasyon takibi</span>
+            </div>
+            <div class="slider-metric">
+              <span class="metric-value" data-translate="slider.metric.2.value">∞</span>
+              <span class="metric-label" data-translate="slider.metric.2.label">Kişiye özel kombinasyon</span>
+            </div>
+          </div>
+          <div class="slider-actions">
+            <a href="#contact" class="btn glow slider-cta" data-translate="slider.cta">Planını Başlat</a>
+            <div class="slider-status">
+              <span data-translate="slider.status">Kaydırarak keşfet</span>
+              <span class="slider-status-dot" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+        <div class="slider-container fade">
+          <div class="slider-track">
+            <div class="slider-item">
+              <div class="slider-image">
+                <img src="slider/1.jpg" alt="Hollywood Standards" loading="lazy">
+              </div>
+              <div class="slider-content">
+                <div class="slider-icon">
+                  <i data-lucide="sparkles"></i>
+                </div>
+                <span class="slider-badge" data-translate="slider.item1.badge">Creative Ops</span>
+                <h3 data-translate="slider.item1.title">Yakında...</h3>
+                <p data-translate="slider.item1.desc">Hollywood Standartlarında hizmetleri tek panelden yönet.</p>
+                <ul class="slider-list">
+                  <li data-translate="slider.item1.point.0">Sahnede kullanılacak tüm materyaller tek pipeline</li>
+                  <li data-translate="slider.item1.point.1">AI destekli storyboard ve tempo eşleme</li>
+                  <li data-translate="slider.item1.point.2">Canlı moderatör + yayın yönetmeni eş zamanlı</li>
+                </ul>
+              </div>
+            </div>
+            <div class="slider-item">
+              <div class="slider-image">
+                <img src="slider/2.jpg" alt="Professional Agents" loading="lazy">
+              </div>
+              <div class="slider-content">
+                <div class="slider-icon">
+                  <i data-lucide="users"></i>
+                </div>
+                <span class="slider-badge" data-translate="slider.item2.badge">Agent Program</span>
+                <h3 data-translate="slider.item2.title">Ajanlarımız seni bu dünyaya hazırlasın..</h3>
+                <p data-translate="slider.item2.desc">Profesyonel ekibimizle yıldız olma yolculuğunuzda yanınızdayız.</p>
+                <ul class="slider-list">
+                  <li data-translate="slider.item2.point.0">Kişiye özel medya hazırlık kampı</li>
+                  <li data-translate="slider.item2.point.1">Haftalık performans raporu ve yeni görevler</li>
+                  <li data-translate="slider.item2.point.2">Mentor eşliğinde sahne + kamera provası</li>
+                </ul>
+              </div>
+            </div>
+            <div class="slider-item">
+              <div class="slider-image">
+                <img src="slider/3.jpg" alt="Social Media Phenomenon" loading="lazy">
+              </div>
+              <div class="slider-content">
+                <div class="slider-icon">
+                  <i data-lucide="trending-up"></i>
+                </div>
+                <span class="slider-badge" data-translate="slider.item3.badge">Social Lab</span>
+                <h3 data-translate="slider.item3.title">Fenomen Olmak İçin Spion Media!</h3>
+                <p data-translate="slider.item3.desc">Sosyal medya algoritmalarımız ve içerik stratejilerimizle sizi bir sonraki fenomen yapıyoruz.</p>
+                <ul class="slider-list">
+                  <li data-translate="slider.item3.point.0">Trend tetikleyici içerik kalıpları</li>
+                  <li data-translate="slider.item3.point.1">Çok kanallı yayın akışı takvimi</li>
+                  <li data-translate="slider.item3.point.2">Topluluk yönetimi + nano influencer ağı</li>
+                </ul>
+              </div>
+            </div>
+            <div class="slider-item">
+              <div class="slider-image">
+                <img src="slider/4.jpg" alt="AI Power" loading="lazy">
+              </div>
+              <div class="slider-content">
+                <div class="slider-icon">
+                  <i data-lucide="brain"></i>
+                </div>
+                <span class="slider-badge" data-translate="slider.item4.badge">Neural Studio</span>
+                <h3 data-translate="slider.item4.title">Algıları Baştan Yarat!</h3>
+                <p data-translate="slider.item4.desc">Yapay zekanın gücünü sonuna kadar kullan.</p>
+                <ul class="slider-list">
+                  <li data-translate="slider.item4.point.0">Gerçek zamanlı ses/görüntü sentezi</li>
+                  <li data-translate="slider.item4.point.1">Bilişsel duygu haritalaması</li>
+                  <li data-translate="slider.item4.point.2">Interaktif fuar ve deneyim kurulumu</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="slider-nav">
+            <button class="slider-btn slider-prev" aria-label="Previous">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <div class="slider-dots"></div>
+            <button class="slider-btn slider-next" aria-label="Next">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="title fade" data-translate="services.title">Our Services</h2>
+        <div class="grid">
+          <article class="card fade service-card">
+            <div class="service-thumb">
+              <img src="1.jpg" alt="Video production" loading="lazy">
+            </div>
+            <div class="service-content">
+              <i data-lucide="film"></i>
+              <h3 data-translate="services.video.title">Video Production Services</h3>
+              <p data-translate="services.video.desc">Creating stunning visual stories that captivate audiences and elevate your brand.</p>
+            </div>
+          </article>
+          <article class="card fade service-card">
+            <div class="service-thumb">
+              <img src="2.jpg" alt="Music production" loading="lazy">
+            </div>
+            <div class="service-content">
+              <i data-lucide="music"></i>
+              <h3 data-translate="services.music.title">Music Production Services</h3>
+              <p data-translate="services.music.desc">Crafting unique soundscapes and professional audio experiences for any medium.</p>
+            </div>
+          </article>
+          <article class="card fade service-card">
+            <div class="service-thumb">
+              <img src="3.jpg" alt="Gamification marketing" loading="lazy">
+            </div>
+            <div class="service-content">
+              <i data-lucide="gamepad-2"></i>
+              <h3 data-translate="services.gamification.title">Gamified Marketing</h3>
+              <p data-translate="services.gamification.desc">Engage your audience through interactive, game-based marketing strategies.</p>
+            </div>
+          </article>
+          <article class="card fade service-card">
+            <div class="service-thumb">
+              <img src="4.jpg" alt="AI services" loading="lazy">
+            </div>
+            <div class="service-content">
+              <i data-lucide="cpu"></i>
+              <h3 data-translate="services.ai.title">AI Services</h3>
+              <p data-translate="services.ai.desc">Voice and video cloning, content enhancement powered by cutting-edge AI technology.</p>
+            </div>
+          </article>
+          <article class="card fade service-card card-wide">
+            <div class="service-thumb">
+              <img src="5.jpg" alt="Social media management" loading="lazy">
+            </div>
+            <div class="service-content">
+              <i data-lucide="share2"></i>
+              <h3 data-translate="services.social.title">Social Media Management</h3>
+              <p data-translate="services.social.desc">Building and managing your digital presence across all social platforms.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision" class="section vision">
+      <div class="container narrow">
+        <div class="vision-header fade">
+          <span class="vision-eyebrow" data-translate="vision.title">Vizyon</span>
+          <h2 class="vision-title" data-translate="vision.subtitle">Trend Terazisini Tutan Merkez</h2>
+          <p class="vision-description" data-translate="vision.description">Sistemde bir terazi işlevi görerek, öne çıkaracağımız trendi ve kişiyi stratejik olarak belirleyen; operasyonlarını kendi uzman ekibiyle yürüten güçlü ve merkezi bir yapı olmayı hedefliyoruz. Bizde hiyerarşi dayatması değil, sonuçla kanıtlanan üstünlük esastır. Kimse kimseye üstünlük kurmaz; üstün olan koyduğu sonuçla görünür olur.</p>
+          <p class="vision-statement" data-translate="vision.statement">Trend terazisini tuttuğumuz bu merkez; veri, yaratıcılık ve uzman ağımızın aynı anda çalıştığı stratejik bir operasyon üssüdür.</p>
+        </div>
+
+        <div class="vision-metrics fade">
+          <div class="vision-metric">
+            <span class="vision-metric-value" data-translate="vision.metrics.0.value">24/7</span>
+            <span class="vision-metric-label" data-translate="vision.metrics.0.label">Trend tarama döngüsü</span>
+          </div>
+          <div class="vision-metric">
+            <span class="vision-metric-value" data-translate="vision.metrics.1.value">15+</span>
+            <span class="vision-metric-label" data-translate="vision.metrics.1.label">Aktif uzman</span>
+          </div>
+          <div class="vision-metric">
+            <span class="vision-metric-value" data-translate="vision.metrics.2.value">Çekirdek</span>
+            <span class="vision-metric-label" data-translate="vision.metrics.2.label">Uzman kadro</span>
+          </div>
+        </div>
+
+        <div class="vision-pillar-wrap">
+          <h3 class="vision-subheading fade" data-translate="vision.pillars.title">Merkezi güçlü kılan üç kolon</h3>
+          <div class="vision-grid">
+            <article class="vision-card fade">
+              <span class="vision-card-tag" data-translate="vision.pillars.0.tag">Seçim</span>
+              <h4 class="vision-card-title" data-translate="vision.pillars.0.title">Trend Strateji Masası</h4>
+              <p class="vision-card-desc" data-translate="vision.pillars.0.desc">Güncel kültürel sinyalleri filtreleyip kimin ve neyin yükseltileceğine karar veren çekirdek ekip.</p>
+              <ul class="vision-point-list">
+                <li data-translate="vision.pillars.0.point.0">Veri odaklı analiz ile potansiyel etkileri ölçekler.</li>
+                <li data-translate="vision.pillars.0.point.1">Topluluk içgörülerini gerçek zamanlı dinler.</li>
+                <li data-translate="vision.pillars.0.point.2">Ajanslara net hedef ve hikâye çerçevesi verir.</li>
+              </ul>
+            </article>
+            <article class="vision-card fade">
+              <span class="vision-card-tag" data-translate="vision.pillars.1.tag">Üretim</span>
+              <h4 class="vision-card-title" data-translate="vision.pillars.1.title">Uzmanlarımız</h4>
+              <p class="vision-card-desc" data-translate="vision.pillars.1.desc">Video, ses, 3D ve oyunlaştırma ekipleri aynı vizyonu farklı formatlara taşır.</p>
+              <ul class="vision-point-list">
+                <li data-translate="vision.pillars.1.point.0">Tüm üretim katmanları tek pano üzerinden koordine edilir.</li>
+                <li data-translate="vision.pillars.1.point.1">Tekrarlanabilir pipeline, kaliteyi standart tutar.</li>
+                <li data-translate="vision.pillars.1.point.2">Deneysel görevler sonuç üreten formatlara evrilir.</li>
+              </ul>
+            </article>
+            <article class="vision-card fade">
+              <span class="vision-card-tag" data-translate="vision.pillars.2.tag">Operasyon</span>
+              <h4 class="vision-card-title" data-translate="vision.pillars.2.title">Uzman Ağının Gücü</h4>
+              <p class="vision-card-desc" data-translate="vision.pillars.2.desc">Kendi uzmanlarımız trendi sahada büyütür, doğru kişileri görünür kılar.</p>
+              <ul class="vision-point-list">
+                <li data-translate="vision.pillars.2.point.0">Manipülasyon değil, ölçümlenebilir etki üretir.</li>
+                <li data-translate="vision.pillars.2.point.1">Topluluk yönetimi ve medya refleksleri entegredir.</li>
+                <li data-translate="vision.pillars.2.point.2">Sonuç kanıtlandığında başarı otomatik görünür olur.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="vision-flow">
+          <h3 class="vision-subheading fade" data-translate="vision.flow.title">Operasyon akışımız</h3>
+          <ol class="vision-flow-steps">
+            <li class="fade">
+              <span class="vision-step-index" data-translate="vision.flow.0.step">01</span>
+              <div>
+                <h4 data-translate="vision.flow.0.title">Veri ve sezgi taraması</h4>
+                <p data-translate="vision.flow.0.desc">Algoritmalar ve deneyimli gözler kültürel sinyalleri toplar.</p>
+              </div>
+            </li>
+            <li class="fade">
+              <span class="vision-step-index" data-translate="vision.flow.1.step">02</span>
+              <div>
+                <h4 data-translate="vision.flow.1.title">Stratejik seçim</h4>
+                <p data-translate="vision.flow.1.desc">Terazi kurulup odaklanacağımız trend ve kişi belirlenir.</p>
+              </div>
+            </li>
+            <li class="fade">
+              <span class="vision-step-index" data-translate="vision.flow.2.step">03</span>
+              <div>
+                <h4 data-translate="vision.flow.2.title">Çok kanallı üretim</h4>
+                <p data-translate="vision.flow.2.desc">Uzman ekipler hikâyeyi tüm formatlara dönüştürür.</p>
+              </div>
+            </li>
+            <li class="fade">
+              <span class="vision-step-index" data-translate="vision.flow.3.step">04</span>
+              <div>
+                <h4 data-translate="vision.flow.3.title">Uzman destekli yayılım</h4>
+                <p data-translate="vision.flow.3.desc">Operasyon ağı trendi büyütür, etkiler ölçülür ve optimize edilir.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="vision-footer">
+          <blockquote class="vision-quote fade" data-translate="vision.quote">“Teraziyi biz tutarız; yetkinlik ağırlık yapar, sonuç dengeyi belirler.”</blockquote>
+          <p class="vision-mantra fade" data-translate="vision.mantra">Şov değil, etki. Süreç değil, sonuç. Estetik değil, üstünlük.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="event" class="section event">
+      <div class="container narrow">
+        <div class="event-card fade">
+          <div class="event-visual" aria-hidden="true">
+            <img src="kisafilm/kisafilm.jpg" alt="Zamanın Günahları kısa filmi görseli" class="event-image" loading="lazy">
+            <div class="event-visual-pattern"></div>
+            <div class="event-visual-overlay"></div>
+          </div>
+          <div class="event-content">
+            <span class="event-eyebrow" data-translate="event.eyebrow">Etkinlik Duyurusu</span>
+            <h3 class="event-title" data-translate="event.title">“Zamanın Günahları” Kısa Filmi</h3>
+            <div class="event-tags">
+              <span class="event-tag" data-translate="event.tag">Yakında</span>
+            </div>
+            <a class="btn glow event-cta" href="#contact" data-translate="event.cta">İletişime Geç</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us" class="section">
+      <div class="container">
+        <h2 class="title fade" data-translate="why.title">Why SPIONARMY?</h2>
+        <div class="grid why-grid">
+          <article class="card fade">
+            <i data-lucide="eye"></i>
+            <h3 data-translate="why.perspective.title">New Perspective</h3>
+            <p data-translate="why.perspective.desc">A young, dynamic team full of new generation creative thinking and fresh ideas.</p>
+          </article>
+          <article class="card fade">
+            <i data-lucide="settings"></i>
+            <h3 data-translate="why.tech.title">Latest Technology</h3>
+            <p data-translate="why.tech.desc">Modern infrastructure equipped with the latest AI tools and production technologies.</p>
+          </article>
+          <article class="card fade">
+            <i data-lucide="heart"></i>
+            <h3 data-translate="why.customer.title">Customer-Focused</h3>
+            <p data-translate="why.customer.desc">Every project is a unique story - we are dedicated to turning your vision into reality.</p>
+          </article>
+          <article class="card fade">
+            <i data-lucide="zap"></i>
+            <h3 data-translate="why.innovative.title">Innovative Approach</h3>
+            <p data-translate="why.innovative.desc">We offer a combination of creative and technical solutions, pushing traditional boundaries.</p>
+          </article>
+        </div>
+        <div class="highlight-box fade">
+          <i data-lucide="star"></i>
+          <p data-translate="why.highlight">Latest Technology and New Generation Perspective</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="title fade" data-translate="contact.title">Get in Touch</h2>
+        <div class="contact-wrap">
+          <div class="contact-info fade">
+            <span class="contact-tag" data-translate="contact.tag">Work with SPIONARMY</span>
+            <h3 class="contact-headline" data-translate="contact.headline">Let’s build unforgettable experiences</h3>
+            <p class="contact-lead" data-translate="contact.lead">Share your goals and we’ll design the visual, audio, and digital journey that amplifies your brand.</p>
+
+            <div class="contact-highlights">
+              <div class="contact-highlight">
+                <i data-lucide="sparkles"></i>
+                <div>
+                  <h4 data-translate="contact.highlight.0.title">End-to-end creative direction</h4>
+                  <p data-translate="contact.highlight.0.desc">From concept development to final delivery, we align technology and artistry for your story.</p>
+                </div>
+              </div>
+              <div class="contact-highlight">
+                <i data-lucide="waves"></i>
+                <div>
+                  <h4 data-translate="contact.highlight.1.title">Adaptive, multilingual production</h4>
+                  <p data-translate="contact.highlight.1.desc">Content tailored for global audiences across video, audio, social, and immersive platforms.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <p class="contact-social-title" data-translate="contact.social.title">Prefer social channels?</p>
+              <div class="contact-social-links">
+                <a class="social-pill" href="https://instagram.com/spionarmy" target="_blank" rel="noopener" aria-label="Instagram">
+                  <i data-lucide="instagram"></i>
+                  <span class="label">Instagram · spionarmy</span>
+                </a>
+                <a class="social-pill" href="https://linkedin.com/company/spionarmy" target="_blank" rel="noopener" aria-label="LinkedIn">
+                  <i data-lucide="linkedin"></i>
+                  <span class="label">LinkedIn · spionarmy</span>
+                </a>
+                <a class="social-pill" href="https://youtube.com/@spionarmy" target="_blank" rel="noopener" aria-label="YouTube">
+                  <i data-lucide="youtube"></i>
+                  <span class="label">YouTube · spionarmy</span>
+                </a>
+                <a class="social-pill" href="https://medium.com/@spionarmy" target="_blank" rel="noopener" aria-label="Medium">
+                  <i data-lucide="book"></i>
+                  <span class="label">Medium · @spionarmy</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <form class="card form fade contact-form" id="iletisim_formu" novalidate>
+            <div class="form-head">
+              <h3 class="form-title" data-translate="contact.form.title">Project brief</h3>
+              <p class="form-desc" data-translate="contact.form.desc">Tell us about your vision, timeline, and any references. We’ll follow up within one business day.</p>
+            </div>
+            <div class="field">
+              <input type="text" id="ad" name="ad" autocomplete="name" data-translate-placeholder="contact.form.name" placeholder="Your Name" required>
+            </div>
+            <div class="field">
+              <input type="email" id="eposta" name="eposta" autocomplete="email" data-translate-placeholder="contact.form.email" placeholder="Your Email" required>
+            </div>
+            <div class="field">
+              <textarea id="mesaj" name="mesaj" rows="5" data-translate-placeholder="contact.form.message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn glow" data-translate="contact.form.submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="cookies" class="section">
+    <div class="container narrow">
+      <h2 class="title fade" data-translate="cookies.title">Cookies &amp; Privacy</h2>
+      <p class="lead fade" data-translate="cookies.description">We use cookies to enhance your browsing experience and understand how our site is used.</p>
+      <ul class="cookies-list">
+        <li class="fade" data-translate="cookies.item.necessary">Essential cookies keep the site secure and enable core functionality.</li>
+        <li class="fade" data-translate="cookies.item.analytics">Analytics cookies help us analyze traffic so we can improve our services.</li>
+        <li class="fade" data-translate="cookies.item.preference">Preference cookies remember your language selection and settings.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="yil"></span> SPIONARMY</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
